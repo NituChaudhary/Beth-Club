@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>The Beth Harmon Club</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hidemenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="product.html">PRODUCT</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="login.html">ACCOUNT</a></li>
+                    </ul>
+                </div> 
+                <i class="fa fa-bars" onclick="showmenu()"></i>
+
+           
+            </nav>
+
+        </section>
+        
+        <!----LOgin/Register---->
+
+        <div id='login-form' class="login-page">
+            <!---Creating form box---->
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn2"></div>
+                    <button type="button" onclick="login()" class="toggle-btn">Login</button> 
+                    <button type="button" onclick="Register()" class="toggle-btn">Register</button> 
+
+               <!---Creating login--> 
+                        <form id="login" class="input-group-login">
+                            <input type="text" class="input-field" placeholder="Email Id"required>
+                            <input type="password" class="input-field" placeholder="Enter Password" required>
+                            <input type="checkbox" class="check-box"><span>Remember Password</span>
+                            <button type="submit" class="submit-btn">Login</button>
+                            <a href="">Forgot Password</a>
+                        </form>
+     <!-----------------Creating register------------------>
+                        <form id="register" class="input-group-register">
+                            <input type="text" class="input-field" placeholder="Username" required>
+                            <input type="email" class="input-field" placeholder="Email"required>
+                            <input type="password" class="input-field" placeholder="Password"required>
+                            <input type="password"class="input-field" placeholder="Confirm Password"required>
+                            <button type="submit" class="submit-btn">Register</button>
+                        </form>
+                    </div>
+                        
+                 </div>
+                </div>
+        <!------------------------js for toggle form------------------>
+        
+        <script>
+            var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var Indicator = document.getElementById("Indicator");
+        
+              function register(){
+        
+                  RegForm.style.transform = "translateX(0px)";
+                  LoginForm.style.transform = "translateX(0px)";
+                  Indicator.style.transform = "translateX(100px)";
+              }
+        
+              function login(){
+        
+                  RegForm.style.transform = "translateX(300px)";
+                  LoginForm.style.transform = "translateX(300px)";
+                  Indicator.style.transform = "translateX(0px)";
+              }
+        </script>
+
+    
+<!------------Footer--------->
+
+<section class="footer">
+    <h4>About Us</h4>
+    <p>The Beth Harmon club is chess club where every beginners can learn how to play chess and  play through online.</p>
+    <div class="icons">
+        <a href="https://www.facebook.com/thebethharmonclub" class="facebook"><i class="fa fa-facebook "></i>
+        <a href="https://twitter.com/bethharmonclub" class="twitter"><i class="fa fa-twitter "></i> </a>
+        <a href="https://www.instagram.com/thebethharmonclub" class="instagram"><i class="fa fa-instagram "></i></a>
+    </div>
+    <p>© 2021 The Beth Harmon Club</p>
+
+</section>
+
+
+
+        <!-----Java script for toggle menu-->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showmenu(){
+                navLinks.style.right = "0";
+            }
+            function hidemenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+    </body>
+</html>
